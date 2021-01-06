@@ -1,6 +1,6 @@
 const fs = require("fs");
 const PNG = require("pngjs").PNG;
-const HtsDriver = require("./Shared/hts-driver");
+const HtsDriver = require("../Shared/hts-driver");
 
 const missionBaseUrl = "https://www.hackthissite.org/missions/prog/2";
 const imageFilePath = "./Temp/02-encoded-message.png";
@@ -41,7 +41,7 @@ const getMorseCode = async () => new Promise(resolve => {
 });
 
 (async () => {
-    const hts = new HtsDriver("./Shared/hts-driver.json");
+    const hts = new HtsDriver("../Shared/hts-driver.json");
 
     await hts.initializeBrowser();
     await hts.driver.get(missionBaseUrl);

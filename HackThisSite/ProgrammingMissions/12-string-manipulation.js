@@ -1,4 +1,4 @@
-const HtsDriver = require("./Shared/hts-driver");
+const HtsDriver = require("../Shared/hts-driver");
 
 const missionBaseUrl = "https://www.hackthissite.org/missions/prog/12";
 
@@ -23,7 +23,7 @@ const isPrime = (number) => {
 };
 
 (async () => {
-    const hts = new HtsDriver("./Shared/hts-driver.json");
+    const hts = new HtsDriver("../Shared/hts-driver.json");
 
     await hts.initializeBrowser();
     await hts.driver.get(missionBaseUrl);

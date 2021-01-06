@@ -1,6 +1,6 @@
 const fs = require("fs");
 const unzipper = require("unzipper");
-const HtsDriver = require("./Shared/hts-driver");
+const HtsDriver = require("../Shared/hts-driver");
 
 const missionBaseUrl = "https://www.hackthissite.org/missions/prog/1";
 const wordlistZipFilePath = "./Temp/01-wordlist.zip";
@@ -13,7 +13,7 @@ const unzipFile = async (zipFilePath, outFilePath) => new Promise(resolve => {
 });
 
 (async () => {
-    const hts = new HtsDriver("./Shared/hts-driver.json");
+    const hts = new HtsDriver("../Shared/hts-driver.json");
 
     await hts.downloadFile(`${missionBaseUrl}/wordlist.zip`, wordlistZipFilePath);
     await unzipFile(wordlistZipFilePath, wordlistExtractPath);
