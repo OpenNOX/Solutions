@@ -1,0 +1,7 @@
+{
+    "headless": true,
+    "login": {
+        "username": "",
+        "password": ""
+    }
+}

@@ -1,0 +1,7 @@
+*.ignore*
+
+/HackThisSite/**/*.*
+!/HackThisSite/**/*.js
+!/HackThisSite/**/hts-driver.example.json
+
+/node_modules/
