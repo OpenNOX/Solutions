@@ -2,6 +2,11 @@
 
 ## [Hack This Site](https://www.hackthissite.org/)
 
+### Application Missions
+
+* [**Level 01**](./HackThisSite/ApplicationMissions/level-01.md)
+    * **Status:** Completed
+
 ### Programming Missions
 
 * **01 - Unscramble the words**
