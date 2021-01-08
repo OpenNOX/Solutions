@@ -18,3 +18,9 @@
 * **11 - Reverse Ascii Shift**
     * **Status:** Completed
     * **Description:** This level is about reversing a simple cipher text.
+
+### Steganography Missions
+
+* [**Level 01**](./HackThisSite/SteganographyMissions/level-01.md)
+    * **Status:** Completed
+    * **Hint:** This is an encoded message, the only tip you get is '2 null bytes'

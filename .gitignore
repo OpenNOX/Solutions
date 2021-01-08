@@ -2,6 +2,7 @@
 
 /HackThisSite/**/*.*
 !/HackThisSite/**/*.js
+!/HackThisSite/**/*.md
 !/HackThisSite/**/hts-driver.example.json
 
 /node_modules/
