@@ -11,4 +11,4 @@
     00111000 01100110 01101110 11010000 11000010 11100110 0110110?
     ```
 * Converting the LSBs binary to ASCII gives `8fn���6`, but should be a human-readable password.
-* Wrote [steganography-solver.js](./HackThisSite/Shared/SteganographySolver/steganography-solver.js) and supporting streams to find all human-readable passwords.
+* Wrote [steganography-solver.js](../Shared/SteganographySolver/steganography-solver.js) and supporting streams to find all human-readable passwords.
