@@ -9,7 +9,23 @@
                 "<node_internals>/**"
             ],
             "program": "${file}",
-            "cwd": "${fileDirname}"
+            "cwd": "${fileDirname}",
+        },
+        {
+            "type": "pwa-node",
+            "request": "launch",
+            "name": "Run All Tests",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/node_modules/mocha/bin/_mocha",
+            "args": [
+                "--timeout", "999999",
+                "--colors",
+                "${workspaceFolder}/project-euler/tests/**/*test.js"
+            ],
+            "cwd": "${workspaceFolder}/project-euler/tests",
+            "internalConsoleOptions": "openOnSessionStart",
         }
     ]
 }
