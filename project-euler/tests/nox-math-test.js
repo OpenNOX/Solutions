@@ -71,6 +71,18 @@ describe("NoxMath", () => {
         });
     });
 
+    describe(".isPrime", () => {
+        it("29 returns true", () => {
+            assert.strictEqual(NoxMath.isPrime(29), true);
+        });
+    });
+
+    describe(".getPrimeFactors", () => {
+        it("13195 returns [5, 7, 13, 29]", () => {
+            assert.deepStrictEqual(NoxMath.getPrimeFactors(13195), [5, 7, 13, 29]);
+        });
+    });
+
     describe(".getGregorianWeekDay", () => {
         it("1900-01-01 returns 'Monday'", () => {
             assert.strictEqual(NoxMath.getGregorianWeekDay(1900, 1, 1), "Monday");

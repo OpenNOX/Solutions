@@ -107,6 +107,33 @@ class NoxMath {
         return properDivisors.filter(n => n < number).sort((a, b) => a - b);
     }
 
+    static isPrime(number) {
+        if (number < 2 ) {
+            return false;
+        }
+
+        if (number === 2) {
+            return true;
+        } else if (number % 2 === 0) {
+            return false;
+        }
+
+        for (var i = 3; i * i <= number; i += 2) {
+            if (number % i === 0) {
+                return false;
+            }
+        }
+
+        return true;
+    }
+
+    static getPrimeFactors(number) {
+        const factors = NoxMath.getProperDivisors(number);
+
+        return factors.slice(0, Math.floor(factors.length / 2))
+            .filter((factor => NoxMath.isPrime(factor)));
+    }
+
     static getGregorianWeekDay(year, month, day) {
         const previousYear = month < 3;
         const century = parseInt(year.toString().slice(0, 2)) - ((previousYear) ? 1 : 0);
