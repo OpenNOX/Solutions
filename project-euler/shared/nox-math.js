@@ -91,6 +91,22 @@ class NoxMath {
         return factorialResult;
     }
 
+    static getProperDivisors(number) {
+        const properDivisors = [];
+
+        for (let i = 1; i <= Math.floor(Math.sqrt(number)) + 1; i += 1) {
+            if (number % i === 0) {
+                if (number / i === i) {
+                    properDivisors.push(i);
+                } else {
+                    properDivisors.push(i, number / i);
+                }
+            }
+        }
+
+        return properDivisors.filter(n => n < number).sort((a, b) => a - b);
+    }
+
     static getGregorianWeekDay(year, month, day) {
         const previousYear = month < 3;
         const century = parseInt(year.toString().slice(0, 2)) - ((previousYear) ? 1 : 0);

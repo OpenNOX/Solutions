@@ -56,8 +56,18 @@ describe("NoxMath", () => {
     });
 
     describe(".factorial", () => {
-        it.only("returns correct value", () => {
+        it("returns correct value", () => {
             assert.strictEqual(NoxMath.factorial(10), "3628800");
+        });
+    });
+
+    describe(".getProperDivisors", () => {
+        it("220 returns [1, 2, 4, 5, 10, 11, 20, 22, 44, 55, 110]", () => {
+            assert.deepStrictEqual(NoxMath.getProperDivisors(220), [1, 2, 4, 5, 10, 11, 20, 22, 44, 55, 110]);
+        });
+
+        it("284 returns [1, 2, 4, 71, 142]", () => {
+            assert.deepStrictEqual(NoxMath.getProperDivisors(284), [1, 2, 4, 71, 142]);
         });
     });
 
