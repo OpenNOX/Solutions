@@ -81,6 +81,16 @@ class NoxMath {
         return powResult;
     }
 
+    static factorial(number) {
+        let factorialResult = '1';
+
+        for (let i = number; i > 0; i -= 1) {
+            factorialResult = NoxMath.product(factorialResult, i);
+        }
+
+        return factorialResult;
+    }
+
     static getGregorianWeekDay(year, month, day) {
         const previousYear = month < 3;
         const century = parseInt(year.toString().slice(0, 2)) - ((previousYear) ? 1 : 0);

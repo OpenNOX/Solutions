@@ -55,6 +55,12 @@ describe("NoxMath", () => {
         });
     });
 
+    describe(".factorial", () => {
+        it.only("returns correct value", () => {
+            assert.strictEqual(NoxMath.factorial(10), "3628800");
+        });
+    });
+
     describe(".getGregorianWeekDay", () => {
         it("1900-01-01 returns 'Monday'", () => {
             assert.strictEqual(NoxMath.getGregorianWeekDay(1900, 1, 1), "Monday");
