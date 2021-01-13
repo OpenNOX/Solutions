@@ -17,6 +17,10 @@ const getSortedLengthInputs = (number1, number2) => [
 ].sort((a, b) => b.length - a.length);
 
 class NoxMath {
+    static mod(number, maximum) {
+        return ((number % maximum) + maximum) % maximum;
+    }
+
     static sum(number1, number2) {
         const [num1, num2] = getSortedLengthInputs(number1, number2);
         let sumResult = '';
@@ -75,6 +79,18 @@ class NoxMath {
         }
 
         return powResult;
+    }
+
+    static getGregorianWeekDay(year, month, day) {
+        const previousYear = month < 3;
+        const century = parseInt(year.toString().slice(0, 2)) - ((previousYear) ? 1 : 0);
+        year = parseInt(year.toString().slice(2, 4)) - ((previousYear) ? 1 : 0);
+        year = (year < 0) ? 100 + year : year;
+        month = (previousYear) ? 12 - (2 - month) : 14 - month;
+
+        return ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Satruday"][
+            NoxMath.mod(day + Math.floor(2.6 * month - 0.2) - 2 * century + year + Math.floor(year / 4) + Math.floor(century / 4), 7)
+        ];
     }
 
     static toEnglish(number) {

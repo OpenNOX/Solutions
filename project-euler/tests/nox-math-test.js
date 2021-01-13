@@ -2,6 +2,16 @@ const assert = require("assert");
 const NoxMath = require("../shared/nox-math");
 
 describe("NoxMath", () => {
+    describe(".mod", () => {
+        it("returns correct value when number is greater than 0", () => {
+            assert.strictEqual(NoxMath.mod(85, 80), 5);
+        });
+
+        it("returns correct value when number is less than 0", () => {
+            assert.strictEqual(NoxMath.mod(-5, 80), 75);
+        });
+    });
+
     describe(".sum", () => {
         const number1 = 85315486;
         const number2 = 22164;
@@ -42,6 +52,16 @@ describe("NoxMath", () => {
             const power = 15;
 
             assert.strictEqual(NoxMath.pow(baseValue, power), (Math.pow(baseValue, power)).toString());
+        });
+    });
+
+    describe(".getGregorianWeekDay", () => {
+        it("1900-01-01 returns 'Monday'", () => {
+            assert.strictEqual(NoxMath.getGregorianWeekDay(1900, 1, 1), "Monday");
+        });
+
+        it("2000-08-01 returns 'Tuesday'", () => {
+            assert.strictEqual(NoxMath.getGregorianWeekDay(2000, 8, 1), "Tuesday");
         });
     });
 
