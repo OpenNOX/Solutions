@@ -6,3 +6,5 @@
 !/HackThisSite/**/hts-driver.example.json
 
 /node_modules/
+
+/project-euler/data
