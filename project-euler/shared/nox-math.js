@@ -130,8 +130,7 @@ class NoxMath {
     static getPrimeFactors(number) {
         const factors = NoxMath.getProperDivisors(number);
 
-        return factors.slice(0, Math.floor(factors.length / 2))
-            .filter((factor => NoxMath.isPrime(factor)));
+        return factors.filter(factor => NoxMath.isPrime(factor));
     }
 
     static getGregorianWeekDay(year, month, day) {

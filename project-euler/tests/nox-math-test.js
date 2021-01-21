@@ -78,6 +78,14 @@ describe("NoxMath", () => {
     });
 
     describe(".getPrimeFactors", () => {
+        it("21 returns [3, 7]", () => {
+            assert.deepStrictEqual(NoxMath.getPrimeFactors(21), [3, 7]);
+        });
+
+        it("644 returns [2, 7, 23]", () => {
+            assert.deepStrictEqual(NoxMath.getPrimeFactors(644), [2, 7, 23]);
+        });
+
         it("13195 returns [5, 7, 13, 29]", () => {
             assert.deepStrictEqual(NoxMath.getPrimeFactors(13195), [5, 7, 13, 29]);
         });
